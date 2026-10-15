@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — GPX Group Tracker</title>
+<meta name="description" content="Qué datos usa GPX Group Tracker, para qué, dónde se guardan y cómo borrarlos.">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/logo.png" alt="">GPX Group Tracker</a>
+    <nav>
+      <a href="./">Inicio</a>
+      <a href="condiciones.html">Condiciones de uso</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal">
+  <div class="wrap">
+    <h1>Política de privacidad</h1>
+    <p class="updated">Última actualización: 15 de octubre de 2026</p>
+
+    <p>GPX Group Tracker es una app para Android que sirve para salir en grupo con rutas GPX y ver en tiempo real dónde va cada uno. Esta página explica qué datos usa, para qué, dónde se guardan y cómo borrarlos. En resumen: <strong>no hace falta cuenta, no hay publicidad ni analítica, y tus posiciones y las rutas del grupo viajan cifradas</strong>, de forma que el servidor no puede leerlas.</p>
+
+    <h2>Responsable</h2>
+    <p>NandoSoft, desarrollador de la app, con sede en España. Contacto: <a href="mailto:gpxgrouptracker@gmail.com">gpxgrouptracker@gmail.com</a>.</p>
+
+    <h2>Qué datos usa la app</h2>
+    <ul>
+      <li><strong>El nombre que eliges</strong> para que te vean los demás (puede ser un apodo).</li>
+      <li><strong>Un identificador aleatorio</strong> que la app crea al instalarse, para distinguirte dentro del grupo. No está ligado a tu teléfono, tu número ni tu cuenta de Google.</li>
+      <li><strong>Tu ubicación</strong> (posición, rumbo y velocidad), solo mientras tienes activado el seguimiento en vivo, que se ve siempre con una notificación fija.</li>
+      <li><strong>Lo que compartes con el grupo</strong>: rutas GPX, puntos de reagrupamiento, quién está en el grupo y las alertas S.O.S. con tu posición.</li>
+      <li><strong>El acelerómetro del móvil</strong>, solo si activas la detección de caídas. Se analiza en el propio móvil y no se envía a ningún sitio.</li>
+    </ul>
+    <p>La app no pide ni recoge tu correo, tu teléfono, tus contactos, fotos ni ningún otro dato, y no usa publicidad, analítica ni seguimiento de terceros.</p>
+
+    <h2>Para qué se usan</h2>
+    <p>Solo para que funcione lo que tú pides: que tu grupo vea dónde vas y reciba las rutas, los avisos y los S.O.S., y, si lo activas, que tu familia vea tu posición con el enlace que les mandes. La base legal es la prestación del servicio que solicitas al usar la app y, para la ubicación, el permiso que concedes en Android. No se venden ni se ceden datos a nadie.</p>
+
+    <h2>Cómo se envían: cifrados con el código del grupo</h2>
+    <p>Las posiciones, las rutas y el resto de mensajes del grupo se cifran en el móvil (AES-256) con una clave que sale del código del grupo, antes de salir del teléfono. Pasan por un servidor de mensajería (MQTT) que solo ve datos cifrados: únicamente quien tiene el código del grupo puede leerlos. Comparte el código solo con tu grupo.</p>
+    <p>El enlace para la familia usa su propia clave, que va en el enlace y nunca llega al servidor.</p>
+
+    <h2>Dónde se guardan y cuánto tiempo</h2>
+    <ul>
+      <li><strong>En tu móvil</strong>: tus grupos, rutas, salidas (historial), ajustes y el registro de golpes de la detección de caídas. Se quedan en el móvil hasta que los borras en la app o desinstalas la app.</li>
+      <li><strong>En el servidor de mensajería</strong> (HiveMQ Cloud, de HiveMQ GmbH, como encargado del tratamiento), siempre cifrados:
+        <ul>
+          <li>Las posiciones en vivo <strong>no se guardan</strong>: el servidor las reenvía a tu grupo en el momento.</li>
+          <li>El estado del grupo (quién está, las rutas y los puntos de reagrupamiento) se guarda mientras forma parte del grupo, para que lo reciba quien se conecta más tarde. Al salir del grupo se borra tu presencia, y al quitar una ruta se borra su contenido del servidor (solo queda una marca cifrada de que se quitó, para que desaparezca también en los móviles de los demás).</li>
+          <li>Un S.O.S. se guarda mientras está activo; al pulsar «Estoy bien» se borra.</li>
+          <li>Con el enlace para la familia, se guarda tu última posición mientras el enlace está activo.</li>
+        </ul>
+      </li>
+      <li>Si en Ajustes configuras <strong>tu propio servidor</strong>, los mensajes pasan por ese servidor en lugar del de la app.</li>
+    </ul>
+
+    <h2>Servicios de terceros</h2>
+    <ul>
+      <li><strong>Mapas</strong>: al ver mapas online, el móvil descarga las imágenes del mapa de OpenStreetMap, OpenTopoMap, el Instituto Geográfico Nacional (capa de satélite) o Thunderforest. Como cualquier web, esos servidores reciben la dirección IP del móvil y la zona del mapa que se pide. Los mapas offline se descargan una vez de mapsforge.org y después funcionan sin conexión.</li>
+      <li><strong>Google Play</strong>: la descarga, las actualizaciones y, cuando existan, las compras de Premium se hacen a través de Google Play, con su propia <a href="https://policies.google.com/privacy">política de privacidad</a>. La app no recibe tus datos de pago.</li>
+      <li><strong>Versiones de prueba</strong>: las versiones para probadores se reparten con Firebase App Distribution (Google) y comprueban si hay una versión nueva consultando un archivo en GitHub Pages.</li>
+    </ul>
+
+    <h2>Permisos de Android</h2>
+    <ul>
+      <li><strong>Ubicación precisa</strong>: para el seguimiento en vivo, el aviso de salida de ruta y el S.O.S. Solo se usa con el seguimiento en vivo activado (servicio en primer plano con notificación visible).</li>
+      <li><strong>Notificaciones</strong>: para el seguimiento en vivo, los S.O.S. del grupo y la detección de caídas.</li>
+      <li><strong>Vibración e Internet</strong>: para los avisos y para comunicarse con el grupo.</li>
+    </ul>
+
+    <h2>Tus derechos y cómo borrar tus datos</h2>
+    <p>Como no hay cuenta y el servidor solo guarda datos cifrados, la forma más directa de borrar tus datos es desde la app: sal del grupo o bórralo, quita las rutas que hayas compartido, borra tus salidas y, si quieres, desinstala la app. También puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a <a href="mailto:gpxgrouptracker@gmail.com">gpxgrouptracker@gmail.com</a>, y presentar una reclamación ante la <a href="https://www.aepd.es">Agencia Española de Protección de Datos</a>.</p>
+
+    <h2>Menores</h2>
+    <p>La app no está dirigida a menores de 14 años.</p>
+
+    <h2>Cambios</h2>
+    <p>Si esta política cambia, se publicará aquí con su nueva fecha y, si el cambio es importante, se avisará en la app.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 GPX Group Tracker · NandoSoft</span>
+    <span><a href="./">Inicio</a> · <a href="condiciones.html">Condiciones de uso</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
