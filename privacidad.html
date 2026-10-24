@@ -23,7 +23,7 @@
 <main class="legal">
   <div class="wrap">
     <h1>Política de privacidad</h1>
-    <p class="updated">Última actualización: 15 de octubre de 2026</p>
+    <p class="updated">Última actualización: 24 de octubre de 2026</p>
 
     <p>GPX Group Tracker es una app para Android que sirve para salir en grupo con rutas GPX y ver en tiempo real dónde va cada uno. Esta página explica qué datos usa, para qué, dónde se guardan y cómo borrarlos. En resumen: <strong>no hace falta cuenta, no hay publicidad ni analítica, y tus posiciones y las rutas del grupo viajan cifradas</strong>, de forma que el servidor no puede leerlas.</p>
 
@@ -37,6 +37,7 @@
       <li><strong>Tu ubicación</strong> (posición, rumbo y velocidad), solo mientras tienes activado el seguimiento en vivo, que se ve siempre con una notificación fija.</li>
       <li><strong>Lo que compartes con el grupo</strong>: rutas GPX, puntos de reagrupamiento, quién está en el grupo y las alertas S.O.S. con tu posición.</li>
       <li><strong>El acelerómetro del móvil</strong>, solo si activas la detección de caídas. Se analiza en el propio móvil y no se envía a ningún sitio.</li>
+      <li><strong>Tu voz</strong>, solo cuando pulsas el botón del walkie-talkie para hablar al grupo (como mucho 15 segundos por mensaje). Nunca se graba sin que lo pulses.</li>
     </ul>
     <p>La app no pide ni recoge tu correo, tu teléfono, tus contactos, fotos ni ningún otro dato, y no usa publicidad, analítica ni seguimiento de terceros.</p>
 
@@ -55,6 +56,7 @@
           <li>Las posiciones en vivo <strong>no se guardan</strong>: el servidor las reenvía a tu grupo en el momento.</li>
           <li>El estado del grupo (quién está, las rutas y los puntos de reagrupamiento) se guarda mientras forma parte del grupo, para que lo reciba quien se conecta más tarde. Al salir del grupo se borra tu presencia, y al quitar una ruta se borra su contenido del servidor (solo queda una marca cifrada de que se quitó, para que desaparezca también en los móviles de los demás).</li>
           <li>Un S.O.S. se guarda mientras está activo; al pulsar «Estoy bien» se borra.</li>
+          <li>Un mensaje de voz del walkie-talkie se guarda, cifrado, solo 2 minutos (para que lo oiga quien recupera la cobertura) y después se borra del servidor. Una petición de parada se guarda hasta que pulsas «Seguimos» o como mucho 30 minutos.</li>
           <li>Con el enlace para la familia, se guarda tu última posición mientras el enlace está activo.</li>
         </ul>
       </li>
@@ -71,7 +73,8 @@
     <h2>Permisos de Android</h2>
     <ul>
       <li><strong>Ubicación precisa</strong>: para el seguimiento en vivo, el aviso de salida de ruta y el S.O.S. Solo se usa con el seguimiento en vivo activado (servicio en primer plano con notificación visible).</li>
-      <li><strong>Notificaciones</strong>: para el seguimiento en vivo, los S.O.S. del grupo y la detección de caídas.</li>
+      <li><strong>Micrófono</strong>: solo para el walkie-talkie, mientras grabas un mensaje que tú has pedido enviar. Se pide la primera vez que lo usas y puedes denegarlo: el resto de la app funciona igual y sigues oyendo los mensajes del grupo.</li>
+      <li><strong>Notificaciones</strong>: para el seguimiento en vivo, los S.O.S. y paradas del grupo y la detección de caídas.</li>
       <li><strong>Vibración e Internet</strong>: para los avisos y para comunicarse con el grupo.</li>
     </ul>
 
