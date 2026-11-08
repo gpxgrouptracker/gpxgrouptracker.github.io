@@ -81,3 +81,15 @@ footer a { color: var(--muted); }
 /* Instagram icon in the menu and buttons */
 .ig{width:20px;height:20px;vertical-align:-4px}
 .btn .ig{margin-right:6px}
+
+/* Guía «Cómo se usa» */
+.legal h3 { font-size: 1.05rem; margin: 18px 0 6px; }
+.legal .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; }
+.legal .toc a { border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; text-decoration: none; color: var(--text); font-size: .92rem; }
+.legal .toc a:hover { background: var(--panel); }
+.legal h2[id] { scroll-margin-top: 16px; }
+.legal details { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; margin: 10px 0; }
+.legal summary { cursor: pointer; font-weight: 700; padding: 14px 0; list-style-position: outside; }
+.legal details[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+.legal details > :last-child { margin-bottom: 14px; }
+.legal .notice { margin: 16px 0; }
